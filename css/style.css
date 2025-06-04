@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* navbar css code here */
+.nav-bar {
+  background-color: #fa7753;
+  margin-top: 0.2rem;
+  border-radius: 0.4rem;
+}
+.nav-link{
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+    display: inline-block;
+    transition: 0.5s;
+    }
+.nav-link:hover {
+  transform: translateY(-10px);
+}
+.ul-nav {
+  list-style-type: none;
+  display: flex;
+  padding-top: 0.4rem;
+  justify-content: right;
+}
+.li-nav {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.2rem 1rem;
+}
+/* here we end navbar css code */
+/* here we start main css code */
+.main-container{
+  width: 100%;
+  overflow: hidden;
+}
+/* ...existing code... */
+.slipt-main {
+  display: flex;
+ margin-top: 1rem;
+ padding: 2rem 1rem;
+ margin-bottom: 1rem;
+  background-color: #73e7fe;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: row; 
+  width: 100%;
+  gap: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px 0 rgba(60, 72, 88, 0.08);
+}
+.main-text{
+  text-align: justify;
+}
+.main-text-h{
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+.book, .main-boy {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.8rem;
+}
+
+/* ...existing code... */
+.gyan-img,.book-logo {
+  position: relative;
+  width: 20rem;
+  border-radius: 20rem;
+  height: 20rem;
+  margin-bottom: 2rem;
+}
+.main-detail {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #22223b;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #f7cac9 0%, #fae1dd 100%);
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px 0 rgba(60, 72, 88, 0.07);
+  letter-spacing: 1px;
+  transition: box-shadow 0.3s;
+}
+.main-detail:hover {
+  box-shadow: 0 6px 24px 0 rgba(60, 72, 88, 0.13);
+}
+/* here we do end main css code  */
+
+/* here we start footer css code */
+
+.footer {
+  position: relative;
+  width: 100%;
+  border-radius: 0.2rem;
+  background: #fa7753;
+  min-height: 100px;
+  padding: 1.5rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.social-icon {
+  position: relative;
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #000000;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+.mail-to {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 2rem  0 1rem 0;
+}
+/* here we end footer css code */
+/* Responsive design for small screens */
+@media screen and (max-width: 610px) {
+    .ul-nav {
+  padding-top: 0.2rem;
+}
+  .li-nav {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.2rem 0.5rem;
+  }
+  .nav-link:hover {
+  transform: translateY(-8px);
+}
+ .slipt-main {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0.5rem;
+  }
+  .book, .main-boy {
+    min-width: unset;
+    width: 100%;
+    padding: 1.5rem 0.5rem;
+  }
+}
