@@ -53,7 +53,6 @@ const i = ["इ", "ई", "ि", "ी"];
 const u = ["उ", "ऊ", "ु", "ू"];
 const r = ["ऋ", "ॠ", "ऌ", "ृ", "ॄ", "ॢ"];
 
-//vidhi sutra
 function deerghaSandhi(event) {
   event.preventDefault();
   const preContainer = document.getElementById("preWord");
@@ -67,39 +66,26 @@ function deerghaSandhi(event) {
   let index = ak.indexOf(preLetter);
   let adesh = deergha[index];
 
-  const resultBox = document.getElementById("result");
-
+ let output ="";
   if (
     (a.includes(preLetter) && a.includes(postLetter)) ||
     (i.includes(preLetter) && i.includes(postLetter)) ||
     (u.includes(preLetter) && u.includes(postLetter)) ||
     (r.includes(preLetter) && r.includes(postLetter))
   ) {
-    resultBox.value = preWord.slice(0, -1) + adesh + postWord.slice(1);
+    output = preWord.slice(0, -1) + adesh + postWord.slice(1);
   } else {
-    resultBox.value = "Invalid Input";
+    output = "Invalid Input";
   }
-}
-
-//here the code of deergha sandhi page code ends
-function deerghaSandhi(event) {
-  event.preventDefault();
-  const preWord = document.getElementById("preWord").value;
-  const postWord = document.getElementById("postWord").value;
-  // Replace this with your actual sandhi logic
-  const result = preWord + postWord;
-
-  // Nayi row banayein
+  // Nayi row banayein (har attempt ke liye)
   const tableBody = document.querySelector("#resultTable tbody");
   const newRow = document.createElement("tr");
   newRow.innerHTML = `
         <td>${preWord}</td>
         <td>${postWord}</td>
-        <td>${result}</td>
+        <td>${output}</td>
     `;
   tableBody.appendChild(newRow);
 
   document.getElementById("resultTable").style.display = "table";
-  // document.getElementById('preWord').value = '';
-  // document.getElementById('postWord').value = '';
 }
