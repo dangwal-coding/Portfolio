@@ -168,31 +168,7 @@ header {
 /* here we end footer css code */
 /* Responsive design for small screens */
 @media screen and (max-width: 610px) {
-    .ul-nav {
-  padding-top: 0.2rem;
-}
-  .li-nav {
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 0.2rem 0.5rem;
-  }
-  .nav-link:hover {
-  transform: translateY(-8px);
-}
- .slipt-main {
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1rem 0.5rem;
-  }
-  .book, .main-boy {
-    min-width: unset;
-    width: 100%;
-    padding: 1.5rem 0.5rem;
-  }
-}
-@media (max-width: 768px) {
-  .nav-links {
+    .nav-links {
     position: absolute;
     top: 70px;
     left: 0;
@@ -211,5 +187,15 @@ header {
 
 .hamburger {
     display: flex;
+  }
+ .slipt-main {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0.5rem;
+  }
+  .book, .main-boy {
+    min-width: unset;
+    width: 100%;
+    padding: 1.5rem 0.5rem;
   }
 }
