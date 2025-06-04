@@ -4,35 +4,62 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 /* navbar css code here */
-.nav-bar {
-  background-color: #fa7753;
-  margin-top: 0.2rem;
-  border-radius: 0.4rem;
+header {
+  background: linear-gradient(135deg, #d10067, #f25c05);
+  padding: 1rem 0;
+  color: white;
+  position: relative;
+  z-index: 999;
 }
-.nav-link{
-    cursor: pointer;
-    text-decoration: none;
-    color: #000000;
-    display: inline-block;
-    transition: 0.5s;
-    }
-.nav-link:hover {
-  transform: translateY(-10px);
-}
-.ul-nav {
-  list-style-type: none;
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1rem;
   display: flex;
-  padding-top: 0.4rem;
-  justify-content: right;
+  align-items: center;
+  justify-content: space-between;
 }
-.li-nav {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 0.2rem 1rem;
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
 }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: lowercase;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffe18d;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  border-radius: 2px;
+}
+
 /* here we end navbar css code */
 /* here we start main css code */
 .main-container{
@@ -162,5 +189,27 @@
     min-width: unset;
     width: 100%;
     padding: 1.5rem 0.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #d10067;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 0;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+   justify-content: center;
+  }
+
+.hamburger {
+    display: flex;
   }
 }
